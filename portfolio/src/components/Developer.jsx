@@ -10,26 +10,45 @@ const Developer = ({ animationName = 'idle', ...props }) => {
     const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
     const { nodes, materials } = useGraph(clone);
 
-    const { animations: idleAnimation } = useFBX('/models/animations/Idle.fbx');
+    const { animations: idleAnimation } = useFBX('/models/animations/happy.fbx');
+    //const { animations: saluteAnimation } = useFBX('/models/animations/salute.fbx');
+    //const { animations: clappingAnimation } = useFBX('/models/animations/clapping.fbx');
+    //const { animations: victoryAnimation } = useFBX('/models/animations/victory.fbx');
+
     const { animations: fingerAnimation } = useFBX('/models/animations/Pointing Gesture.fbx');
-    const { animations: clappingAnimation } = useFBX('/models/animations/clapping.fbx');
-    const { animations: victoryAnimation } = useFBX('/models/animations/victory.fbx');
+    const { animations: danceAnimation } = useFBX('/models/animations/dance.fbx');
+    const { animations: stretchAnimation } = useFBX('/models/animations/stretch.fbx');
+
 
     idleAnimation[0].name = 'idle';
-    fingerAnimation[0].name = "finger";
-    clappingAnimation[0].name = 'clapping';
-    victoryAnimation[0].name = 'victory';
+    //saluteAnimation[0].name = 'salute';
+    //clappingAnimation[0].name = 'clapping';
+    //victoryAnimation[0].name = 'victory';
+    fingerAnimation[0].name = 'fingers';
+    danceAnimation[0].name = 'dance';
+    stretchAnimation[0].name = 'stretch';
 
     const { actions } = useAnimations(
-        [idleAnimation[0], fingerAnimation[0], clappingAnimation[0], victoryAnimation[0]],
-        group,
+        [
+            idleAnimation[0],
+            //saluteAnimation[0],
+            //clappingAnimation[0],
+            //victoryAnimation[0],
+            fingerAnimation[0],
+            danceAnimation[0],
+            stretchAnimation[0]
+        ],
+        group
     );
-    console.log("Available animations:", actions);
-    console.log("Trying to play animation:", animationName);
+
     useEffect(() => {
-        actions[animationName].reset().fadeIn(0.5).play();
-        return () => actions[animationName].fadeOut(0.5);
-    }, [animationName]);
+        if (actions[animationName]) {
+            actions[animationName].reset().fadeIn(0.5).play();
+            return () => actions[animationName]?.fadeOut(0.5);
+        } else {
+            console.warn(`Animation "${animationName}" not found.`);
+        }
+    }, [animationName, actions]);
 
     return (
         <group {...props} dispose={null} ref={group}>
@@ -85,9 +104,8 @@ const Developer = ({ animationName = 'idle', ...props }) => {
             />
             <primitive object={nodes.Hips} />
         </group>
-    )
-}
-
+    );
+};
 
 useGLTF.preload('/models/Avatar.glb');
 

@@ -28,7 +28,8 @@ export const clientReviews = [
         position: 'Embedded Systems Programmer',
         img: 'assets/review1.png',
         review:
-            'Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.',
+            'Whether its a cheery smile or an infectious laugh, Christoph shines brightly in any environment. He is dependable and diligent and it has always been a pleasure to work along side christoph.' +
+            'He is eager to help others and to share his knowledge, or learn what it takes to get the job done right. Christoph is a fantastic asset to any team fortunate enough to work with him.',
     },
     {
         id: 2,
@@ -59,12 +60,12 @@ export const clientReviews = [
 
 export const myProjects = [
     {
-        title: 'Podcastr - AI Podcast Platform',
-        desc: 'Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.',
+        title: 'RobotROB - Robotic arm control',
+        desc: 'RobotROB was a school project from my robotics class in 2021. We utilized Matlab and a DOBOT to create an object track and trace arm which tracked a red square and traced the shape with a laser',
         subdesc:
-            'Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, TypeScript, Framer Motion and Convex, Podcastr is designed for optimal performance and scalability.',
-        href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
-        texture: '/textures/project/project1.mp4',
+            'Built with DOBOT and Matlab we created a realtime object tracking software that then translated location points of red square to robot space and traced the locations in which the square moved',
+        href: 'https://www.youtube.com/watch?v=xc1zoq4L6w8',
+        texture: '/textures/project/RobotROB.mp4',
         logo: '/assets/project-logo1.png',
         logoStyle: {
             backgroundColor: '#2A1816',
@@ -96,12 +97,12 @@ export const myProjects = [
         ],
     },
     {
-        title: 'LiveDoc - Real-Time Google Docs Clone',
-        desc: 'LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.',
+        title: 'EmoFusion',
+        desc: 'EmoFusion was a game jam project for WolfJam 2024 we developed a game in godot. ',
         subdesc:
-            'With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.',
-        href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
-        texture: '/textures/project/project2.mp4',
+            'EmoFusion is a cooperative puzzle/adventure game set in a mystical realm called Empathylia. The game is designed to promote collaboration and empathy by requiring players to work together to balance their emotions and solve puzzles.',
+        href: '',
+        texture: '/textures/project/EmoFusion.webm',
         logo: '/assets/project-logo2.png',
         logoStyle: {
             backgroundColor: '#13202F',
@@ -266,7 +267,7 @@ export const workExperiences = [
         duration: '2024 - Present',
         title: "I conduct research on AI and complex systems, with a focus on the gaming industry. I leverage tools like Wireshark to analyze network traffic data and use Python for data manipulation and inference",
         icon: '/assets/framer.svg',
-        animation: 'victory',
+        animation: 'fingers',
     },
     {
         id: 2,
@@ -276,7 +277,17 @@ export const workExperiences = [
         title: " Programmed 100+ manufacturing robots using proprietary assembly level language, resulting in over $11M in sales. " +
             "I also set the standards for programming of the newest style of machine introduced to the custom machine line these standards are still in use today",
         icon: '/assets/figma.svg',
-        animation: 'clapping',
+        animation: 'stretch',
     },
-
+    {
+        id: 3,
+        name: 'Restaurant',
+        pos: 'Line Chef',
+        duration: '2013 - 2021',
+        title: " Being a line cook taught me efficiency, adaptability, and precision—skills that directly impact my programming. " +
+            "Just like in the kitchen, coding requires planning, multitasking, and problem-solving under pressure. " +
+            "Clear communication and optimization make both cooking and software development smoother and more effective.",
+        icon: '/assets/figma.svg',
+        animation: 'dance',
+    },
 ];

@@ -43,10 +43,12 @@ export const clientReviews = [
     {
         id: 3,
         name: 'Lawrence Durodogan',
-        position: 'Project Manager at UrbanTech ',
+        position: 'Security Manager and Consultant',
         img: 'assets/review3.png',
         review:
-            'I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
+            'Chris is an exceptional individual. His brilliance on computers, networks, and cybersecurity makes him a standout individual in his field.'+
+            'His personality complements his overall expertise, making him not only highly skilled but also a pleasure to work with. His unwavering kindness shines through'+
+            'in everything he does, as he is always ready to lend a helping hand, offer thoughtful guidance, and support others with genuine compassion, generosity, and understanding.',
     },
     {
         id: 4,
